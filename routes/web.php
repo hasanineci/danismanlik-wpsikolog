@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\front\home\HomeController;
-use App\Http\Controllers\front\iletisim\ContactController;
+use App\Http\Controllers\front\ContactController;
+use App\Http\Controllers\front\HomeController;
+use App\Http\Controllers\front\OnlineTerapiController;
+use App\Http\Controllers\front\RandevuAlController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +22,10 @@ use Illuminate\Support\Facades\Route;
 Front
 */
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/iletisim', [ContactController::class,'iletisim']);
-Route::get('/iletisim', [ContactController::class,'iletisim']);
+Route::get('/iletisim', [ContactController::class,'Contact']);
+Route::get('/randevual', [RandevuAlController::class,'RandevuAl']);
+Route::get('/onlineterapi', [OnlineTerapiController::class,'OnlineTerapi']);
+
 
 
 /*

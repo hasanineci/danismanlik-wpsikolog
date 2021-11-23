@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\front\iletisim;
+namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function iletisim()
+    public function Contact()
     {
-        return view('front.iletisim.iletisim');
+        return view('front.pages.iletisim');
     }
 }

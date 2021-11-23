@@ -23,11 +23,11 @@
 
                                         <div class="social text-center">
                                             <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="{{ url("#") }}"><i class="fab fa-pinterest-p"></i></a></li>
+                                                <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -42,13 +42,39 @@
                                 <div class="footer__widget-content">
                                     <div class="footer__services">
                                         <ul>
-                                            <li><a href="/">Anasayfa</a></li>
-                                            <li><a href="/corona-virus">Corona Virüs</a></li>
-                                            <li><a href="hakkimizda">Hakkımızda</a></li>
-                                            <li><a href="ekibimiz">Ekibimiz</a></li>
-                                            <li><a href="hizmetlerimiz">Hizmetlerimiz</a></li>
-                                            <li><a href="egitimlerimiz">Eğitimlerimiz</a></li>
-                                            <li><a href="ietisim">İletişim</a></li>
+                                            <li><a href="{{ url("/") }}">Anasayfa</a></li>
+                                            <li><a href="{{ url("/onlineterapi") }}">Online Terapi</a></li>
+                                            <li><a href="{{ url("/hakkimizda") }}">Hakkımızda</a></li>
+                                            <li><a href="{{ url("/ekibimiz") }}">Ekibimiz</a></li>
+                                            <li><a href="{{ url("/hizmetlerimiz") }}">Hizmetlerimiz</a></li>
+                                            <li><a href="{{ url("/egitimlerimiz") }}">Eğitimlerimiz</a></li>
+                                            <li><a href="{{ url("/randevual") }}">Randevu Al</a></li>
+                                            <li><a href="{{ url("/iletisim") }}">İletişim</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 offset-xl-1 mb-50">
+                            <div class="footer__widget">
+                                <div class="footer__widget-title mb-25">
+                                    <h2><small>TERAPİ HİZMETLERİMİZ</small></h2>
+                                </div>
+                                <div class="footer__widget-content">
+                                    <div class="footer__services">
+                                        <ul>
+                                            <li><a href="{{ url("#") }}">Aile Terapisi</a></li>
+                                            <li><a href="{{ url("#") }}">Çift Terapisi</a></li>
+                                            <li><a href="{{ url("#") }}">Danışmanlık</a></li>
+                                            <li><a href="{{ url("#") }}">Deprasyon Sorunu</a></li>
+                                            <li><a href="{{ url("#") }}">Flört & İlişki Terapisi</a></li>
+                                            <li><a href="{{ url("#") }}">Aile Danışmanlığı</a></li>
+                                            <li><a href="{{ url("#") }}">Oyun Terapisi</a></li>
+                                            <li><a href="{{ url("#") }}">Kliniğimizde Uygulanan testler</a></li>
+                                            <li><a href="{{ url("#") }}">Konuşma Bozukluğu Tedavisi</a></li>
+                                            <li><a href="{{ url("#") }}">Psikolog Hizmetleri</a></li>
+                                            <li><a href="{{ url("#") }}">Psikoterapiler</a></li>
+                                            <li><a href="{{ url("#") }}">Psikiyatrik Tedaviler</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -83,27 +109,6 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 offset-xl-1 mb-50">
-                            <div class="footer__widget">
-                                <div class="footer__widget-title mb-25">
-                                    <h2><small>İLETİŞİMDE KALIN</small></h2>
-                                </div>
-                                <div class="footer__widget-content">
-                                    <div class="footer__subscribe">
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium illum
-                                            dolores consectetur esse error facere repellat
-                                            laborum.</p>
-                                        <div class="footer__subscribe-form">
-                                            <form action="#">
-                                                <input type="email" placeholder="Email Adresiniz">
-                                                <button class="s-btn" type="submit"><i class="fal fa-paper-plane"></i>
-                                                    Abone Ol</button>
-                                            </form>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

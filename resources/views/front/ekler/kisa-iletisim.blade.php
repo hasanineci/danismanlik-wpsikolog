@@ -61,7 +61,7 @@
                 <div class="col-xl-6 col-lg-6 pr-0">
                     <div class="contact__map-wrapper">
                         <iframe
-                            src="https://maps.google.com/maps?hl=tr&amp;q=Şanlıurfa+()&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
+                            src="https://maps.google.com/maps?hl=tr&amp;q=şanlıurfa,haliliye,Halide Nusret Zorlutuna,Cd.,No:10, Sultan Fatih+()&amp;ie=UTF8&amp;t=&amp;z=18&amp;iwloc=B&amp;output=embed"></iframe>
                     </div>
                 </div>
             </div>

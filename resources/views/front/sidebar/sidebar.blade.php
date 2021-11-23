@@ -1,5 +1,5 @@
 <!-- slider area start -->
-<div class="slider-area p-relative" data-background="assets/img/slider/slider-bg.jpg">
+<div class="slider-area p-relative" data-background="{{ asset ("assets/img/slider/slider-bg.jpg") }}">
     <div class="slider-bg-text p-absolute">
         <h2 class="vert-move">wpsikoloji</h2>
     </div>
@@ -14,13 +14,13 @@
                             <h2 data-animation="fadeInUp" data-delay=".4s" style="font-size: 60px">En iyi terapi, ailenizi mükkemelleştirir
                             </h2>
                             <div class="slider-btn" data-animation="fadeInUp" data-delay=".6s">
-                                <a href="contact.html" class="s-btn s-btn__white">iletişime geçiniz</a>
+                                <a href="{{ url ("#") }}" class="s-btn s-btn__white">iletişime geçiniz</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-7 col-md-7 d-none d-md-inline-block">
                         <div class="slider-thumb text-right" data-animation="fadeInRight" data-delay=".8s">
-                            <img src="assets/img/slider/slider-humb.jpg" alt="">
+                            <img src="{{ asset ("assets/img/slider/slider-humb.jpg") }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -33,13 +33,13 @@
                             <h2 data-animation="fadeInUp" data-delay=".4s" style="font-size: 60px">En iyi terapi, ailenizi mükkemelleştirir
                             </h2>
                             <div class="slider-btn" data-animation="fadeInUp" data-delay=".6s">
-                                <a href="contact.html" class="s-btn s-btn__white">iletişime geçiniz</a>
+                                <a href="{{ url ("#") }}" class="s-btn s-btn__white">iletişime geçiniz</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-7 col-md-7 d-none d-md-inline-block">
                         <div class="slider-thumb text-right" data-animation="fadeInRight" data-delay=".8s">
-                            <img src="assets/img/slider/slider-humb-2.jpg" alt="">
+                            <img src="{{ asset ("assets/img/slider/slider-humb-2.jpg") }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -52,13 +52,13 @@
                             <h2 data-animation="fadeInUp" data-delay=".4s" style="font-size: 60px">En iyi terapi, ailenizi mükkemelleştirir
                             </h2>
                             <div class="slider-btn" data-animation="fadeInUp" data-delay=".6s">
-                                <a href="contact.html" class="s-btn s-btn__white">iletişime geçiniz</a>
+                                <a href="{{ url ("#") }}" class="s-btn s-btn__white">iletişime geçiniz</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-7 col-md-7 d-none d-md-inline-block">
                         <div class="slider-thumb text-right" data-animation="fadeInRight" data-delay=".8s">
-                            <img src="assets/img/slider/slider-humb.jpg" alt="">
+                            <img src="{{ asset ("assets/img/slider/slider-humb.jpg") }}" alt="">
                         </div>
                     </div>
                 </div>

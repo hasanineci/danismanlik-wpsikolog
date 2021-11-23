@@ -1,5 +1,5 @@
 <!-- services area start -->
-<section class="services__area pb-40">
+<section class="services__area mt-40 pb-40">
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">

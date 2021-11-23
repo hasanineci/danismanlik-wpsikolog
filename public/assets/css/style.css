@@ -973,6 +973,10 @@ p {
     background: #ffffff;
 }
 
+.navbar-color {
+    background-color: #066C5F;
+}
+
 .logo-2 {
     background-color: #056c5f;
     padding: 22px 53px;
@@ -1151,7 +1155,7 @@ p {
     right: 0;
     top: -5px;
     width: 1px;
-    height: 87px;
+    height: 62px;
     background-color: #e4e2df;
 }
 
@@ -1185,7 +1189,7 @@ p {
 }
 
 .header__info-text span:last-child {
-    text-transform: capitalize;
+    text-transform: inherit;
 }
 
 .header__bottom {

@@ -9,7 +9,7 @@
 @include('front.ekler.kisa-hakkimda')
 @include('front.ekler.kisa-servislerimiz')
 @include('front.ekler.psikolog')
-@include('front.ekler.randevu-al')
+@include('front.ekler.kisa-randevu-al')
 @include('front.ekler.referanslar')
 @include('front.ekler.kisa-iletisim')
 @include('front.ekler.sertifikalarimiz')
