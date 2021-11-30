@@ -42,14 +42,19 @@
                                 <div class="footer__widget-content">
                                     <div class="footer__services">
                                         <ul>
-                                            <li><a href="{{ url("/") }}">Anasayfa</a></li>
+                                            <li><a href="{{ url('/')}}">Anasayfa</a></li>
                                             <li><a href="{{ url("/onlineterapi") }}">Online Terapi</a></li>
-                                            <li><a href="{{ url("/hakkimizda") }}">Hakkımızda</a></li>
-                                            <li><a href="{{ url("/ekibimiz") }}">Ekibimiz</a></li>
-                                            <li><a href="{{ url("/hizmetlerimiz") }}">Hizmetlerimiz</a></li>
-                                            <li><a href="{{ url("/egitimlerimiz") }}">Eğitimlerimiz</a></li>
-                                            <li><a href="{{ url("/randevual") }}">Randevu Al</a></li>
-                                            <li><a href="{{ url("/iletisim") }}">İletişim</a></li>
+                                            <li> <a href="" style="pointer-events: none; cursor: default;">Kurumsal</a>
+                                                <ul class="submenu">
+                                                    <li><a href="{{ url('/ekibimiz')}}">Ekibimiz</a></li>
+                                                    <li><a href="{{ url('/hakkimizda')}}">Hakkımızda</a></li>
+                                                    <li><a href="{{ url('/anlasmalikurumlar')}}">Analşamalı Kurumlar</a></li>
+                                                    <li><a href="{{ url('/gizlilikpolitikamiz')}}">Gizlilik Politikası</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{{ url('/hizmetlerimiz')}}">Hizmetlerimiz</a></li>
+                                            <li><a href="{{ url('/randevual')}}">Randevu Al</a></li>
+                                            <li><a href="{{ url('/iletisim')}}">İletişim</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -121,15 +126,15 @@
                             <div class="footer__copyright-text">
                                 <p>Copyright © @php echo date('Y'); @endphp <a href="{{url('/')}}"> wpsikoloji</a> her
                                     hakkı
-                                    saklıdır. &#9478; <small>Tema: <a href="www.hasanineci.com">Hasan İNECİ</a></small>
+                                    saklıdır. &#9478; <small>Tema: <a href="http://hasanineci.com/" target="_blank" >Hasan İNECİ</a></small>
                                 </p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="footer__policy ">
-                                <a href="#">KVKK</a>
-                                <a href="#"> Gizlilik Politikamız</a>
-                                <a href="#">Müşteri Memnuniyeti</a>
+                                <a href="{{ url ("/kvkk") }}">KVKK</a>
+                                <a href="{{ url ("/gizlilikpolitikamiz") }}"> Gizlilik Politikamız</a>
+                                <a href="{{ url ("/musterimemnuniyeti") }}">Müşteri Memnuniyeti</a>
                             </div>
                         </div>
                     </div>

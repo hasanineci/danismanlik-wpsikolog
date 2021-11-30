@@ -1,5 +1,5 @@
 <!-- appointment area start -->
-<section class="appointment__area pb-130">
+<section class="appointment__area pb-50">
     <div class="container">
         <div class="appointment__area-inner white-bg p-relative">
             <div class="row">

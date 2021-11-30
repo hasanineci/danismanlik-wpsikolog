@@ -1,8 +1,5 @@
 <!-- slider area start -->
 <div class="slider-area p-relative" data-background="{{ asset ("assets/img/slider/slider-bg.jpg") }}">
-    <div class="slider-bg-text p-absolute">
-        <h2 class="vert-move">wpsikoloji</h2>
-    </div>
     <div class="container">
     <div class="container-fluid p-0">
         <div class="slider-active">

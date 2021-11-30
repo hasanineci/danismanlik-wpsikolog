@@ -1,27 +1,27 @@
-<!-- client area start -->
-<div class="client__area pt-50 pb-55" data-background="assets/img/bg/pattern-3.jpg">
-    <div class="container-fluid p-0">
+<!-- referanslar alanı start -->
+<div class="client__area-3 pt-30 pb-30 grey-bg-3">
+    <div class="container">
         <div class="row no-gutters">
             <div class="col-xl-12">
                 <div class="client__slider client__slider-active owl-carousel text-center">
                     <div class="client__thumb">
-                        <a href="#"><img src="assets/img/client/client-1.png" alt="client-1"></a>
+                        <a href="{{ url ("#") }}"><img src="{{ asset("assets/img/client/03/client-01.png") }}" alt="referanslar-1"></a>
                     </div>
                     <div class="client__thumb">
-                        <a href="#"><img src="assets/img/client/client-2.png" alt="client-1"></a>
+                        <a href="{{ url ("#") }}"><img src="{{ asset("assets/img/client/03/client-02.png") }}" alt="referanslar-1"></a>
                     </div>
                     <div class="client__thumb">
-                        <a href="#"><img src="assets/img/client/client-3.png" alt="client-1"></a>
+                        <a href="{{ url ("#") }}"><img src="{{ asset("assets/img/client/03/client-03.png") }}" alt="referanslar-1"></a>
                     </div>
                     <div class="client__thumb">
-                        <a href="#"><img src="assets/img/client/client-4.png" alt="client-1"></a>
+                        <a href="{{ url ("#") }}"><img src="{{ asset("assets/img/client/03/client-04.png") }}" alt="referanslar-1"></a>
                     </div>
                     <div class="client__thumb">
-                        <a href="#"><img src="assets/img/client/client-5.png" alt="client-1"></a>
+                        <a href="{{ url ("#") }}"><img src="{{ asset("assets/img/client/03/client-05.png") }}" alt="referanslar-1"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- client area end -->
+<!-- referanslar alanı end -->

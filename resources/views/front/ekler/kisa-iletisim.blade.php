@@ -1,5 +1,5 @@
 <!-- contact us area start -->
-<section class="contact__area pb-80 box-pl-105 pt-120 p-relative mt-200" data-background="assets/img/bg/pattern-3.jpg">
+<section class="contact__area pb-80 box-pl-105 pt-120 p-relative mt-150" data-background="assets/img/bg/pattern-3.jpg">
         <div class="container-fluid">
             <div class="container">
             <div class="row ">
