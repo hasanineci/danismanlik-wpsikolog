@@ -26,6 +26,20 @@
     <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/default.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+    
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "905415148515",
+                call_to_action: "Merhaba, nasıl yardımcı olabiliriz?",
+                position: "left",
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
 </head>
 
 <body>
@@ -52,23 +66,23 @@
     @include('front.footer.footer')
 
     <!-- javascript -->
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/vendor/waypoints.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/jquery.fancybox.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script data-cfasync="false" src="{{ asset('../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
+    <script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{ asset('assets/js/vendor/waypoints.min.js')}}"></script>
+    <script src="{{ asset('assets/js/popper.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('assets/js/metisMenu.min.js')}}"></script>
+    <script src="{{ asset('assets/js/slick.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.fancybox.min.js')}}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('assets/js/ajax-form.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{ asset('assets/js/wow.min.js')}}"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{ asset('assets/js/main.js')}}"></script>
 
     @yield('js')
 </body>

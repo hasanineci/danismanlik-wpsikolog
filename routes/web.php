@@ -1,5 +1,19 @@
 <?php
-
+/*
+Admin
+*/
+use App\Http\Controllers\admin\AdminIndexController;
+use App\Http\Controllers\admin\AnlasmaliKurumlarController as AdminAnlasmaliKurumlarController;
+use App\Http\Controllers\admin\BekleyenRandevularController;
+use App\Http\Controllers\admin\EkipController;
+use App\Http\Controllers\admin\GelenMaillerController;
+use App\Http\Controllers\admin\iletisimAyarlariController;
+use App\Http\Controllers\admin\OnaylananRandevularController;
+use App\Http\Controllers\admin\YeniGelenMaillerController;
+use App\Http\Controllers\admin\YonetimAyarlariController;
+/*
+Front
+*/
 use App\Http\Controllers\front\AnlasmaliKurumlarController;
 use App\Http\Controllers\front\ContactController;
 use App\Http\Controllers\front\EkibimizController;
@@ -41,3 +55,12 @@ Route::get('/iletisim', [ContactController::class,'Contact']);
 /*
 Admin
 */
+Route::get('/admin', [AdminIndexController::class, 'AdminIndex']);
+Route::get('/admin/ekip', [EkipController::class, 'Ekip']);
+Route::get('/admin/yonetim-ayarlari', [YonetimAyarlariController::class, 'YonetimAyarlari']);
+Route::get('/admin/iletisim-ayarlari', [iletisimAyarlariController::class, 'iletisimAyarlari']);
+Route::get('/admin/anlasmali-kurumlar', [AdminAnlasmaliKurumlarController::class, 'AnlasmaliKurumlar']);
+Route::get('/admin/yeni-gelen-mailler', [YeniGelenMaillerController::class, 'YeniGelenMailler']);
+Route::get('/admin/gelen-mailler', [GelenMaillerController::class, 'GelenMailler']);
+Route::get('/admin/bekleyen-randevular', [BekleyenRandevularController::class, 'BekleyenRandevular']);
+Route::get('/admin/onaylanan-randevular', [OnaylananRandevularController::class, 'OnaylananRandevular']);

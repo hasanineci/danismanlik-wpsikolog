@@ -12,109 +12,73 @@
     <!-- page title area end -->
 
     <!-- hizmetlerimiz area start -->
-    <section class="case__area pt-110 ">
+    <section class="case__area pt-50 pb-80">
         <div class="container">
             <div class="row">
-                <div class="col-xl-8 offset-xl-2">
-                    <div class="section__title mb-60 pl-50 pr-50 text-center">
-                        <h1>Professional Psychologist Team Ready to Serve you</h1>
-                        <div class="section__icon mb-10">
-                            <span
-                                class="section__sub-title section__sub-title-2 section__sub-title-3 section__sub-title-4">
-                                Expert member</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-xl-12">
-                    <div class="masonary-menu case__menu filter-button-group text-center mb-20">
-                        <button class="active" data-filter="*">All Department</button>
-                        <button data-filter=".cat1">Family Problem </button>
-                        <button data-filter=".cat2">Depression</button>
-                        <button data-filter=".cat3">Personal</button>
-                        <button data-filter=".cat4">Breakup</button>
-                        <button data-filter=".cat5">Frustation</button>
+                    <div class="case__details-item  mb-35">
+                        <h3>Psikiyatrik Tedaviler</h3>
+                        <p>Alanlarında uzman psikolog danışmanlar eşliğinde psikiyatrik tedavi hizmeti sunuyoruz...</p>
+                        <p>Tıbbi yaklaşımın özünde sorunun doğru tanımlanması çok önemlidir. Gerçekçi çözümler ancak
+                            doğru tanımlar üzerinden üretilebilir. Psikiyatrinin tarihçesi ve gelişme sürecinin de
+                            getirdiği özellikler nedeniyle tanı ve tedavi süreçlerinin bilimsel tıbbi süreçler üzerinden
+                            yürümesi özellikle önemlidir. Tanı ve tedavi hizmetlerimiz uygulamalarında spekülatif
+                            yöntemlerden uzak, kanıta dayalı çözümler üretme ilke edinilmiştir.</p>
+                        <p>
+                            <strong>Tedavi Alanları:</strong> Bipolar Bozukluk, Şizofreni ve benzeri bozukluklar,
+                            Depresyon, Distimi, Obsesif Kompulsif Bozukluk, Panik Bozukluk, Dikkat Eksikliği
+                            Hiperaktivite Bozukluğu, Uyku Bozuklukları, Travma Sonrası Stres Bozukluğu, Yaygın Anksiyete
+                            Bozukluğu, Sosyal Fobi, Yeme Bozuklukları.
+                        </p>
                     </div>
-                </div>
-            </div>
-            <div class="row grid">
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item cat1 cat4 cat3">
-                    <div class="case__item-2 p-relative mb-30">
-                        <div class="case__thumb-2 w-img">
-                            <img src="assets/img/case/02/case-04.jpg" alt="case-01">
-                        </div>
-                        <div class="case__content-2 transition-3 grey-bg-3 p-relative">
-                            <h3><a href="case-details.html">Personality Disorder</a></h3>
-                            <p>Fames nostra nascetur dis id pellentree at ligula auctor metus semper convalis ligula
-                                augue natoque </p>
-                            <a href="case-details.html" class="link-btn">explore more</a>
-                        </div>
+                    <div class="case__details-item process">
+                        <h3>Psikoterapiler</h3>
+                        <p>
+                            <strong>Tedavi Alanları:</strong> <strong>EMDR Tedavisi</strong>,
+                            <strong>Hipnoterapi</strong>, <strong>Cinsel Terapi</strong>, <strong>Ebeveyn
+                                Danışmanlığı</strong>, <strong>Boşanma Danışmanlığı ve Süreci</strong>,
+                            <strong>Şanlıurfa Analitik Çocuk Terapisi Hizmeti</strong>, <strong>Neurobiofeedback -
+                                Nöroterapi şanlıurfa</strong>, <strong>Psikoterapi ile Sigarayı Bırakmak</strong>,
+                            <strong>Bilişsel Davranışçı Terapi (Yetişkin ve Çocuk)</strong>
+                        </p>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item cat2 cat5">
-                    <div class="case__item-2 p-relative mb-30">
-                        <div class="case__thumb-2 w-img">
-                            <img src="assets/img/case/02/case-05.jpg" alt="case-01">
-                        </div>
-                        <div class="case__content-2 transition-3 grey-bg-3 p-relative">
-                            <h3><a href="case-details.html">Dysmorphic Disorder</a></h3>
-                            <p>Fames nostra nascetur dis id pellentree at ligula auctor metus semper convalis ligula
-                                augue natoque </p>
-                            <a href="case-details.html" class="link-btn">explore more</a>
-                        </div>
+                    <div class="case__details-item process">
+                        <h3>Psikolog Hizmetleri</h3>
+                        <p>
+                            <strong>Şanlıurfa</strong> da çevre il ve ilçeler genelinde her konuda Psikolog hizmeti
+                            sağlamaktayız.
+                        </p>
+                        <p>
+                            <strong>Tedavi Alanları:</strong> <strong>Yetişkinlere Yönelik Psikolojik Destek</strong>,
+                            <strong>Çocuk Psikolog - Şanlıurfa Pedagog</strong>, <strong>Psikolojik Test
+                                Uygulamaları</strong>.
+                        </p>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item cat3 cat4 cat1">
-                    <div class="case__item-2 p-relative mb-30">
-                        <div class="case__thumb-2 w-img">
-                            <img src="assets/img/case/02/case-06.jpg" alt="case-01">
-                        </div>
-                        <div class="case__content-2 transition-3 grey-bg-3 p-relative">
-                            <h3><a href="case-details.html">Behavioral Symptoms</a></h3>
-                            <p>Fames nostra nascetur dis id pellentree at ligula auctor metus semper convalis ligula
-                                augue natoque </p>
-                            <a href="case-details.html" class="link-btn">explore more</a>
-                        </div>
+                    <div class="case__details-item process">
+                        <h3>Konuşma Bozukluğu Tedavisi</h3>
+                        <p>
+                            Konuşma Bozukluğu Tedavisi, Analitik Çocuk Terapisi ve Artikülasyon Problemleri Tedavisi ile
+                            Akıcı Konuşma Bozuklukları, Kekemelik, Artikülasyon Problemleri, Fonolojik Problemler,
+                            Gecikmiş Konuşma, Disleksi, Afazi rahatsızlıklarını uzman ekibimizle çözüyoruz.
+                        </p>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item  cat3 cat5">
-                    <div class="case__item-2 p-relative mb-30">
-                        <div class="case__thumb-2 w-img">
-                            <img src="assets/img/case/02/case-01.jpg" alt="case-01">
-                        </div>
-                        <div class="case__content-2 transition-3 grey-bg-3 p-relative">
-                            <h3><a href="case-details.html">Children Disorder</a></h3>
-                            <p>Fames nostra nascetur dis id pellentree at ligula auctor metus semper convalis ligula
-                                augue natoque </p>
-                            <a href="case-details.html" class="link-btn">explore more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item cat4 cat3">
-                    <div class="case__item-2 p-relative mb-30">
-                        <div class="case__thumb-2 w-img">
-                            <img src="assets/img/case/02/case-02.jpg" alt="case-01">
-                        </div>
-                        <div class="case__content-2 transition-3 grey-bg-3 p-relative">
-                            <h3><a href="case-details.html">Depression Problem</a></h3>
-                            <p>Fames nostra nascetur dis id pellentree at ligula auctor metus semper convalis ligula
-                                augue natoque </p>
-                            <a href="case-details.html" class="link-btn">explore more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item cat3 cat5">
-                    <div class="case__item-2 p-relative mb-30">
-                        <div class="case__thumb-2 w-img">
-                            <img src="assets/img/case/02/case-03.jpg" alt="case-01">
-                        </div>
-                        <div class="case__content-2 transition-3 grey-bg-3 p-relative">
-                            <h3><a href="case-details.html">Couple Counseling</a></h3>
-                            <p>Fames nostra nascetur dis id pellentree at ligula auctor metus semper convalis ligula
-                                augue natoque </p>
-                            <a href="case-details.html" class="link-btn">explore more</a>
-                        </div>
+                    <div class="case__details-item process">
+                        <h3>Kliniğimizde Uygulanan Testler</h3>
+                        <p>
+                            Sık rastlanan psikiyatrik rahatsızlıklara karşın psikolojik testlerle ücretsiz hizmet
+                            vermekteyiz. Buradaki asla tanı koyma amacı gütmemektedir.
+                        </p>
+                        <p>
+                            Sadece rahatsızlıkların belirtilerinin olup olmadığını belirlemek için oluşturulmuştur.
+                            Alacağınız puanlar başka rahatsızlıklardan kaynaklanıyor olabilir. Eğer bu belirtileri
+                            gösteriyorsanız, mutlaka ama mutlaka bir psikiyatrist hekimden yardım alınız.
+                        </p>
+                        <p>
+                            <strong>Testlerimiz:</strong> WISC-R (Çocuklar için zeka testi), WISC-4 (Çocuklar için zeka
+                            testi), WAIR-R (Yetişkinler için zeka testi), MMPI (Çok yönlü kişilik envanteri), Özgül
+                            Öğrenme Güçlülüğü Testi, Moxo Dikkat Testi, Ayrıntılı Nöropsikiyatrik Test, Beck Anksiyete
+                            Ölçeği, Obsesif Kompulsif Belirti Ölçeği, Sosyal Fobi Belirti Ölçeği.
+                        </p>
                     </div>
                 </div>
             </div>
