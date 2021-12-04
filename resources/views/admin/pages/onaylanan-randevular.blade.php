@@ -29,6 +29,7 @@
                                                 <th scope="col">Adı Soyadı</th>
                                                 <th scope="col">Telefon</th>
                                                 <th scope="col">E-mail</th>
+                                                <th scope="col">Talep Tarihi</th>
                                                 <th scope="col">Randevu Tarihi</th>
                                                 <th scope="col">Randevu Saati</th>
                                                 <th scope="col">Durumu</th>
@@ -42,6 +43,7 @@
                                                 </th>
                                                 <td>0541 234 56 78</td>
                                                 <td>deneme@example.com</td>
+                                                <td>12/12/2021 12:00:00</td>
                                                 <td>12/12/2021</td>
                                                 <td>14:20</td>
                                                 <td><a href="#" class="status_btn">Okundu</a></td>
@@ -55,6 +57,7 @@
                                                 </th>
                                                 <td>0541 234 56 78</td>
                                                 <td>deneme@example.com</td>
+                                                <td>12/12/2021 12:00:00</td>
                                                 <td>12/12/2021</td>
                                                 <td>14:20</td>
                                                 <td><a href="#" class="status_btn">Okundu</a></td>
@@ -68,6 +71,7 @@
                                                 </th>
                                                 <td>0541 234 56 78</td>
                                                 <td>deneme@example.com</td>
+                                                <td>12/12/2021 12:00:00</td>
                                                 <td>12/12/2021</td>
                                                 <td>14:20</td>
                                                 <td><a href="#" class="status_btn">Okundu</a></td>

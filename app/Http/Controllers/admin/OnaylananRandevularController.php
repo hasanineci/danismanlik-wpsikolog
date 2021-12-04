@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class OnaylananRandevularController extends Controller
 {
-    public function OnaylananRandevular()
+    public function OnaylananRandevular_GET()
     {
         return view('admin.pages.onaylanan-randevular');
+    }
+
+    public function OnaylananRandevular_POST()
+    {
+        # code...
     }
 }

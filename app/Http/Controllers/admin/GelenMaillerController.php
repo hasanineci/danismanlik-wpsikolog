@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class GelenMaillerController extends Controller
 {
-    public function GelenMailler()
+    public function GelenMailler_GET()
     {
         return view('admin.pages.gelen-mailler');
+    }
+
+    public function GelenMailler_POST()
+    {
+        # code...
     }
 }

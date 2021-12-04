@@ -23,14 +23,14 @@
                                 src="{{ asset ('assets/admin/img/profilebox/7.jpg') }}" alt="" data-original-title=""
                                 title=""></div>
                         <ul class="card-social">
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{ $ayse->facebook }}" target="_blank" data-original-title="" title=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{ $ayse->twitter }}" target="_blank" data-original-title="" title=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{ $ayse->instagram }}" target="_blank" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <div class="text-center profile-details">
-                            <h4>Ayşe Barkın</h4>
-                            <h6>Klinik Psikolog</h6>
-                            <h6>info@wpsikoloji.com</h6>
+                            <h4>{{ $ayse->name }}</h4>
+                            <h6>{{ $ayse->alani }}</h6>
+                            <h6>{{ $ayse->email }}</h6>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#AyseModalCenter">
@@ -48,14 +48,14 @@
                                 src="{{ asset ('assets/admin/img/profilebox/8.jpg') }}" alt="" data-original-title=""
                                 title=""></div>
                         <ul class="card-social">
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{ $ibrahim->facebook }}" target="_blank" data-original-title="" title=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{ $ibrahim->twitter }}" target="_blank" data-original-title="" title=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{ $ibrahim->instagram }}" target="_blank" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <div class="text-center profile-details">
-                            <h4>İbrahim Halil Barkın</h4>
-                            <h6>Klinik Psikolog</h6>
-                            <h6>info@wpsikoloji.com</h6>
+                            <h4>{{ $ibrahim->name }}</h4>
+                            <h6>{{ $ibrahim->alani }}</h6>
+                            <h6>{{ $ibrahim->email }}</h6>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#ibrahimBarkinModalCenter">
@@ -73,14 +73,14 @@
                                 src="{{ asset ('assets/admin/img/profilebox/8.jpg') }}" alt="" data-original-title=""
                                 title=""></div>
                         <ul class="card-social">
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{ $abdulselam->facebook }}" target="_blank" data-original-title="" title=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{ $abdulselam->twitter }}" target="_blank" data-original-title="" title=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{ $abdulselam->instagram }}" target="_blank" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <div class="text-center profile-details">
-                            <h4>Abdülselam Altıntaş</h4>
-                            <h6>Klinik Psikolog</h6>
-                            <h6>info@wpsikoloji.com</h6>
+                            <h4>{{ $abdulselam->name }}</h4>
+                            <h6>{{ $abdulselam->alani }}</h6>
+                            <h6>{{ $abdulselam->email }}</h6>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#AbdulselamModalCenter">
@@ -100,16 +100,32 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal Ayşe</h5>
+                    <h5 class="modal-title" id="AyseModalCenterTitle">Psikolog Ayşe Barkın</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed esse voluptates, minima neque
-                        asperiores, fuga, explicabo amet repudiandae odio et architecto nihil quibusdam blanditiis eos
-                        similique. Quisquam laboriosam modi eos tempore, dicta odit animi delectus provident consequatur
-                        suscipit quae! Accusantium tempore magni ab reprehenderit at reiciendis impedit sequi illo. </p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Facebook:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Twitter:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">İnstagram:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Email:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
@@ -125,16 +141,32 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal İbrahim Barkın</h5>
+                    <h5 class="modal-title" id="ibrahimBarkinModalCenterTitle">Psikolog İbrahim Halil Barkın</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed esse voluptates, minima neque
-                        asperiores, fuga, explicabo amet repudiandae odio et architecto nihil quibusdam blanditiis eos
-                        similique. Quisquam laboriosam modi eos tempore, dicta odit animi delectus provident consequatur
-                        suscipit quae! Accusantium tempore magni ab reprehenderit at reiciendis impedit sequi illo. </p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Facebook:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Twitter:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">İnstagram:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Email:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
@@ -150,16 +182,32 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal Abdulselam</h5>
+                    <h5 class="modal-title" id="AbdulselamModalCenterTitle">Psikolog Abdulselam Altıntaş</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed esse voluptates, minima neque
-                        asperiores, fuga, explicabo amet repudiandae odio et architecto nihil quibusdam blanditiis eos
-                        similique. Quisquam laboriosam modi eos tempore, dicta odit animi delectus provident consequatur
-                        suscipit quae! Accusantium tempore magni ab reprehenderit at reiciendis impedit sequi illo. </p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Facebook:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Twitter:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">İnstagram:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Email:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>

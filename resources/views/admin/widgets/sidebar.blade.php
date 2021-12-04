@@ -104,7 +104,7 @@
         </li>
         <h4 class="menu-text"><span>SİSTEM</span> <i class="fas fa-ellipsis-h"></i> </h4>
         <li>
-            <a href="{{ url ('/admin') }}" aria-expanded="false">
+            <a href="{{ url ('logout') }}" aria-expanded="false">
                 <div class="nav_icon_small">
                     <i class="ti-direction"></i>
                 </div>

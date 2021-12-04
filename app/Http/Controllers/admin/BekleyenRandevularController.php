@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class BekleyenRandevularController extends Controller
 {
-    public function BekleyenRandevular()
+    public function BekleyenRandevular_GET()
     {
         return view('admin.pages.bekleyen-randevular');
+    }
+
+    public function BekleyenRandevular_POST()
+    {
+        # code...
     }
 }

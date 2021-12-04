@@ -34,7 +34,7 @@
                                         <a class="nav-link" id="Calisma-Saatleri-tab" data-toggle="tab"
                                             href="#Calisma-Saatleri" role="tab" aria-controls="Calisma-Saatleri"
                                             aria-selected="false">
-                                            <i class="ti-alarm-clock"></i> &nbsp;Çalışma Saatleri</a>
+                                            <i class="ti-alarm-clock"></i> &nbsp;Çalışma Günleri</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="Sertifika-ve-Oduller-tab" data-toggle="tab"
@@ -74,59 +74,25 @@
                                                                     <th scope="col">Kurum/İşletme Adı</th>
                                                                     <th scope="col">Tarih</th>
                                                                     <th scope="col">Telefon</th>
+                                                                    <th scope="col">Referans Yetkisi</th>
+                                                                    <th scope="col">Kurum/İşletme Yeri</th>
                                                                     <th scope="col">Fotoğraf</th>
                                                                     <th scope="col">Durumu</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                @foreach ($referanslar as $referanslar)
                                                                 <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Hasan İNECİ
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Şanlıurfa Eğitim ve Araştırma Hastanesi</td>
-                                                                    <td>12/11/2019</td>
-                                                                    <td>0541 444 55 55</td>
-                                                                    <td>Şanlıurfa - Haliliye</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
+                                                                    <th scope="row">{{ $referanslar->name}}</th>
+                                                                    <td>{{ $referanslar->kurum}}</td>
+                                                                    <td>{{ $referanslar->created_at}}</td>
+                                                                    <td>{{ $referanslar->telefon}}</td>
+                                                                    <td>{{ $referanslar->referans_yetki}}</td>
+                                                                    <td>{{ $referanslar->bulundugu_yer}}</td>
+                                                                    <td>{{ $referanslar->fotograf}}</td>
+                                                                    <td><span type="submit" class="status_btn">{{ $referanslar->durum}}</span></td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Hasan İNECİ
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Şanlıurfa Eğitim ve Araştırma Hastanesi</td>
-                                                                    <td>12/11/2019</td>
-                                                                    <td>0541 444 55 55</td>
-                                                                    <td>Şanlıurfa - Haliliye</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Hasan İNECİ
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Şanlıurfa Eğitim ve Araştırma Hastanesi</td>
-                                                                    <td>12/11/2019</td>
-                                                                    <td>0541 444 55 55</td>
-                                                                    <td>Şanlıurfa - Haliliye</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Hasan İNECİ
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Şanlıurfa Eğitim ve Araştırma Hastanesi</td>
-                                                                    <td>12/11/2019</td>
-                                                                    <td>0541 444 55 55</td>
-                                                                    <td>Şanlıurfa - Haliliye</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
+                                                                @endforeach
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -143,7 +109,7 @@
                                                 <div class="form-group col-xl-4 col-lg-6">
                                                     <label for="inputSifre">Eski Şifre</label>
                                                     <input type="text" name="Sifre" class="form-control" id="inputSifre"
-                                                        placeholder="" readonly>
+                                                        placeholder="" value="{{ $yonetimAyarlari->sifre_degistir ?? old('sifre_degistir') }}" readonly>
                                                 </div>
                                                 <div class="form-group col-xl-4 col-lg-6">
                                                     <label for="inputSifre">Yeni Şifre</label>
@@ -161,9 +127,9 @@
                                         <form>
                                             <div class="form-row">
                                                 <div class="form-group col-xl-4 col-lg-6">
-                                                    <label for="inputSaat">Eski Çalışma Saati</label>
+                                                    <label for="inputSaat">Eski Çalışma Günleri</label>
                                                     <input type="text" name="CalismaSaat" class="form-control"
-                                                        id="inputSaat" placeholder="eski" readonly>
+                                                        id="inputSaat" placeholder="" value="{{ $yonetimAyarlari->calisma_gunleri ?? old('calisma_gunleri') }}" readonly>
                                                 </div>
                                                 <div class="form-group col-xl-4 col-lg-6">
                                                     <label for="inputSaat">Yeni Çalışma Saatleri</label>
@@ -202,75 +168,24 @@
                                                                     <th scope="col">Alan</th>
                                                                     <th scope="col">Eğitim Süresi</th>
                                                                     <th scope="col">Verildiği Yer</th>
+                                                                    <th scope="col">Belge Tarihi</th>
                                                                     <th scope="col">Fotoğraf</th>
                                                                     <th scope="col">Durumu</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                @foreach ($sertifikaOduller as $sertifikaOduller)
+                                                                    
+                                                                @endforeach
                                                                 <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Kurs Bitirme Belgesi
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Milli Eğitim Bakanlığı</td>
-                                                                    <td>Psiko Terapi</td>
-                                                                    <td>100 saat</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Kurs Bitirme Belgesi
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Milli Eğitim Bakanlığı</td>
-                                                                    <td>Psiko Terapi</td>
-                                                                    <td>100 saat</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Kurs Bitirme Belgesi
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Milli Eğitim Bakanlığı</td>
-                                                                    <td>Psiko Terapi</td>
-                                                                    <td>100 saat</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Kurs Bitirme Belgesi
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Milli Eğitim Bakanlığı</td>
-                                                                    <td>Psiko Terapi</td>
-                                                                    <td>100 saat</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">
-                                                                        <a href="#" class="question_content">
-                                                                            Kurs Bitirme Belgesi
-                                                                        </a>
-                                                                    </th>
-                                                                    <td>Milli Eğitim Bakanlığı</td>
-                                                                    <td>Depresyon Terapi</td>
-                                                                    <td>80 saat</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td>Ankara - Çankaya</td>
-                                                                    <td><a href="#" class="status_btn">Aktif</a></td>
+                                                                    <th scope="row">{{ $sertifikaOduller->belge_adi }}</th>
+                                                                    <td>{{ $sertifikaOduller->alindigi_yer }}</td>
+                                                                    <td>{{ $sertifikaOduller->alani }}</td>
+                                                                    <td>{{ $sertifikaOduller->egitim_suresi }}</td>
+                                                                    <td>{{ $sertifikaOduller->verildigi_yer }}</td>
+                                                                    <td>{{ $sertifikaOduller->belge_tarihi }}</td>
+                                                                    <td>{{ $sertifikaOduller->fotograf }}</td>
+                                                                    <td><span type="submit" class="status_btn">{{ $sertifikaOduller->durum }}</span></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>

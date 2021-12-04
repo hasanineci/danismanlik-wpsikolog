@@ -21,7 +21,7 @@
                                     <h4>Anlaşmalı Kurumlar</h4>
                                     <div class="box_right d-flex lms_block">
                                         <div class="add_button ml-10">
-                                            <a href="#" data-toggle="modal" data-target="#addcategory" class="btn_1">Ekle</a>
+                                            <a href="#" data-toggle="modal" data-target="#AnlasmaliKurumlar" class="btn_1">Ekle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -40,20 +40,73 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($anlasmaliKurumlar as $anlasmaliKurumlar)
+
                                             <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Harran Üniversitesi Tıp Fakültesi</a></th>
-                                                <td>Dr. Ayşe Barkın</td>
-                                                <td>0541 234 56 78</td>
-                                                <td>Psikiyatri</td>
-                                                <td>Şanlıurfa Osman Bey Kampüsü</td>
-                                                <td><a href="#" class="status_btn">Active</a></td>
+                                                <th scope="row">{{ $anlasmaliKurumlar->kurum_adi }}</th>
+                                                <td>{{ $anlasmaliKurumlar->yetkili_adi }}</td>
+                                                <td>{{ $anlasmaliKurumlar->telefon }}</td>
+                                                <td>{{ $anlasmaliKurumlar->birim }}</td>
+                                                <td>{{ $anlasmaliKurumlar->bulundugu_yer }}</td>
+                                                <td><span type="submit" class="status_btn">{{ $anlasmaliKurumlar->durum }}</span></td>
                                             </tr>
+                                                
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Abdulselam-->
+    <div class="modal fade" id="AnlasmaliKurumlar" tabindex="-1" role="dialog"
+        aria-labelledby="AnlasmaliKurumlarTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AnlasmaliKurumlarTitle">Anlaşmalı Kurum Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Kurum Adı:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Yetkili Ad Soyad:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Telefon:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Birim:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Bulunduğu Yer:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                            <div class="form-group col-xl-12 col-lg-12">
+                                <label for="inputSifre">Durumu:</label>
+                                <input type="text" name="Sifre" class="form-control" id="inputSifre" placeholder="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary">Kaydet</button>
                 </div>
             </div>
         </div>

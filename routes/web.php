@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\iletisimAyarlariController;
 use App\Http\Controllers\admin\OnaylananRandevularController;
 use App\Http\Controllers\admin\YeniGelenMaillerController;
 use App\Http\Controllers\admin\YonetimAyarlariController;
+use App\Http\Controllers\auth\LoginController;
 /*
 Front
 */
@@ -51,16 +52,38 @@ Route::get('/randevu-al', [RandevuAlController::class,'RandevuAl']);
 Route::get('/iletisim', [ContactController::class,'Contact']);
 
 
-
 /*
 Admin
 */
-Route::get('/admin', [AdminIndexController::class, 'AdminIndex']);
-Route::get('/admin/ekip', [EkipController::class, 'Ekip']);
-Route::get('/admin/yonetim-ayarlari', [YonetimAyarlariController::class, 'YonetimAyarlari']);
-Route::get('/admin/iletisim-ayarlari', [iletisimAyarlariController::class, 'iletisimAyarlari']);
-Route::get('/admin/anlasmali-kurumlar', [AdminAnlasmaliKurumlarController::class, 'AnlasmaliKurumlar']);
-Route::get('/admin/yeni-gelen-mailler', [YeniGelenMaillerController::class, 'YeniGelenMailler']);
-Route::get('/admin/gelen-mailler', [GelenMaillerController::class, 'GelenMailler']);
-Route::get('/admin/bekleyen-randevular', [BekleyenRandevularController::class, 'BekleyenRandevular']);
-Route::get('/admin/onaylanan-randevular', [OnaylananRandevularController::class, 'OnaylananRandevular']);
+Route::get('/login', [LoginController::class, 'Login_GET'])->name('login');
+Route::post('/login', [LoginController::class, 'Login_POST']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin', [AdminIndexController::class, 'AdminIndex']);
+
+    Route::get('/admin/ekip', [EkipController::class, 'Ekip_GET']);
+    Route::post('/admin/ekip', [EkipController::class, 'Ekip_POST']);
+
+    Route::get('/admin/yonetim-ayarlari', [YonetimAyarlariController::class, 'YonetimAyarlari_GET']);
+    Route::post('/admin/yonetim-ayarlari', [YonetimAyarlariController::class, 'YonetimAyarlari_POST']);
+
+    Route::get('/admin/iletisim-ayarlari', [iletisimAyarlariController::class, 'iletisimAyarlari_GET']);
+    Route::post('/admin/iletisim-ayarlari', [iletisimAyarlariController::class, 'iletisimAyarlari_POST']);
+
+    Route::get('/admin/anlasmali-kurumlar', [AdminAnlasmaliKurumlarController::class, 'AnlasmaliKurumlar_GET']);
+    Route::post('/admin/anlasmali-kurumlar', [AdminAnlasmaliKurumlarController::class, 'AnlasmaliKurumlar_POST']);
+
+    Route::get('/admin/yeni-gelen-mailler', [YeniGelenMaillerController::class, 'YeniGelenMailler_GET']);
+    Route::post('/admin/yeni-gelen-mailler', [YeniGelenMaillerController::class, 'YeniGelenMailler_POST']);
+
+    Route::get('/admin/gelen-mailler', [GelenMaillerController::class, 'GelenMailler_GET']);
+    Route::post('/admin/gelen-mailler', [GelenMaillerController::class, 'GelenMailler_POST']);
+
+    Route::get('/admin/bekleyen-randevular', [BekleyenRandevularController::class, 'BekleyenRandevular_GET']);
+    Route::post('/admin/bekleyen-randevular', [BekleyenRandevularController::class, 'BekleyenRandevular_POST']);
+
+    Route::get('/admin/onaylanan-randevular', [OnaylananRandevularController::class, 'OnaylananRandevular_GET']);
+    Route::post('/admin/onaylanan-randevular', [OnaylananRandevularController::class, 'OnaylananRandevular_POST']);
+
+    Route::get('logout', [LoginController::class, 'logout']);
+});
+

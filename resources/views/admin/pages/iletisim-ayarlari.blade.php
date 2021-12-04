@@ -46,23 +46,23 @@
                                             <div class="form-row">
                                                 <div class="form-group col-xl-6 col-lg-6">
                                                     <label for="inputFacebook">Facebook:</label>
-                                                    <input type="text" name="Facebook" class="form-control"
-                                                        id="inputFacebook" placeholder="">
+                                                    <input type="text" name="Facebook" class="form-control @error('facebook') is-invalid @enderror"
+                                                        id="inputFacebook" placeholder="" value="{{ $iletisim->facebook ?? old('facebook') }}" required>
                                                 </div>
                                                 <div class="form-group col-xl-6 col-lg-6">
                                                     <label for="inputInstagram">İnstagram:</label>
-                                                    <input type="text" name="Instagram" class="form-control"
-                                                        id="inputInstagram" placeholder="">
+                                                    <input type="text" name="Instagram" class="form-control @error('instagram') is-invalid @enderror"
+                                                        id="inputInstagram" placeholder="" value="{{ $iletisim->instagram ?? old('instagram') }}" required>
                                                 </div>
                                                 <div class="form-group col-xl-6 col-lg-6">
                                                     <label for="inputTwitter">Twitter:</label>
-                                                    <input type="text" name="Twitter" class="form-control"
-                                                        id="inputTwitter" placeholder="">
+                                                    <input type="text" name="Twitter" class="form-control @error('twitter') is-invalid @enderror"
+                                                        id="inputTwitter" placeholder="" value="{{ $iletisim->twitter ?? old('twitter') }}" required>
                                                 </div>
                                                 <div class="form-group col-xl-6 col-lg-6">
                                                     <label for="inputLinkedin">Linkedin:</label>
-                                                    <input type="text" name="Linkedin" class="form-control"
-                                                        id="inputLinkedin" placeholder="">
+                                                    <input type="text" name="Linkedin" class="form-control @error('linkedin') is-invalid @enderror"
+                                                        id="inputLinkedin" placeholder="" value="{{ $iletisim->linkedin ?? old('linkedin') }}" required>
                                                 </div>
                                             </div>
                                         </form>
@@ -74,8 +74,8 @@
                                             <div class="form-row">
                                                 <div class="form-group col-xl-9 col-lg-9">
                                                     <label for="inputAdres">Adres Güncelle:</label>
-                                                    <input type="text" name="Adres" class="form-control"
-                                                        id="inputAdres" placeholder="">
+                                                    <input type="text" name="Adres" class="form-control @error('adres') is-invalid @enderror"
+                                                        id="inputAdres" placeholder="" value="{{ $iletisim->adres ?? old('adres') }}" required>
                                                 </div>
                                             </div>
                                         </form>
@@ -87,8 +87,8 @@
                                             <div class="form-row">
                                                 <div class="form-group col-xl-4 col-lg-4">
                                                     <label for="inputTelefon">Telefon Güncelle:</label>
-                                                    <input type="text" name="Telefon" class="form-control"
-                                                        id="inputTelefon" placeholder="+905411234546">
+                                                    <input type="text" name="Telefon" class="form-control @error('telefon') is-invalid @enderror"
+                                                        id="inputTelefon" value="{{ $iletisim->telefon ?? old('telefon') }}" required>
                                                 </div>
                                             </div>
                                         </form>

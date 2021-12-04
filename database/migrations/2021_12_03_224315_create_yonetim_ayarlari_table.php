@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateYonetimAyarlariTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,17 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('yonetim_ayarlari', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('sifre_degistir');
+            $table->string('calisma_gunleri');
             $table->rememberToken();
             $table->timestamps();
         });
 
-        
-
-        $add = DB::table('users')->insert([
-            "name" => "Hasan İneci",
-            "email" => "hasanineci@gmail.com",
-            "password" => bcrypt(123456),
+        $add = DB::table('yonetim_ayarlari')->insert([
+            "sifre_degistir" => "123456",
+            "calisma_gunleri" => "Pazartesi - Cumartesi",
             "created_at" => date('Y-m-d H:i:s'),
             "updated_at" => date('Y-m-d H:i:s')
         ]);
@@ -41,6 +36,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('yonetim_ayarlari');
     }
 }
