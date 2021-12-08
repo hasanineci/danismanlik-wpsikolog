@@ -7,11 +7,10 @@
                     <div class="header__top-left">
                         <div class="social text-center">
                             <ul>
-                                <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="{{ url("#") }}"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="{{ iletisim()->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{{ iletisim()->twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="{{ iletisim()->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{{ iletisim()->linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -23,7 +22,7 @@
                                 <span class="icon flaticon-history"></span>
                             </div>
                             <div class="header__info-text">
-                                <span>Açılış: Pazartesi - Cumartesi</span>
+                                <span>Açılış: {{ yonetim()->calisma_gunleri }}</span>
                             </div>
                         </div>
                         <div class="header__info d-none d-md-flex">
@@ -31,7 +30,7 @@
                                 <span class="icon flaticon-24-hours-support"></span>
                             </div>
                             <div class="header__info-text">
-                                <span>Bizi Arayın: (+90) 541 234 56 78</span>
+                                <a href="tel:{{ iletisim()->telefon }}"><span>Bizi Arayın: {{ iletisim()->telefon }}</span></a>
                             </div>
                         </div>
                         <div class="header__info d-none d-md-flex">
@@ -39,8 +38,7 @@
                                 <span class="icon flaticon-envelope"></span>
                             </div>
                             <div class="header__info-text">
-                                <span>e-mail: <a href="{{ url (" #") }}" class="__cf_email__"
-                                        data-cfemail="c7aea9a1a887b4bea4afa8f5f3e9a4a8aa">info@wsikoloji.com</a>
+                                <span>e-mail: <a href="mailto:{{ iletisim()->email }}" class="__cf_email__">{{ iletisim()->email }}</a>
                                 </span>
                             </div>
                         </div>

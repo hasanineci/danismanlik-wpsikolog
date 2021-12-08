@@ -71,12 +71,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/admin/anlasmali-kurumlar', [AdminAnlasmaliKurumlarController::class, 'AnlasmaliKurumlar_GET']);
     Route::post('/admin/anlasmali-kurumlar', [AdminAnlasmaliKurumlarController::class, 'AnlasmaliKurumlar_POST']);
+    Route::post('/admin/anlasmali-kurumlar/oku', [AdminAnlasmaliKurumlarController::class, 'oku_POST']);
 
     Route::get('/admin/yeni-gelen-mailler', [YeniGelenMaillerController::class, 'YeniGelenMailler_GET']);
     Route::post('/admin/yeni-gelen-mailler', [YeniGelenMaillerController::class, 'YeniGelenMailler_POST']);
 
     Route::get('/admin/gelen-mailler', [GelenMaillerController::class, 'GelenMailler_GET']);
     Route::post('/admin/gelen-mailler', [GelenMaillerController::class, 'GelenMailler_POST']);
+    Route::post('/admin/gelen-mailler/oku', [GelenMaillerController::class, 'oku_POST']);
 
     Route::get('/admin/bekleyen-randevular', [BekleyenRandevularController::class, 'BekleyenRandevular_GET']);
     Route::post('/admin/bekleyen-randevular', [BekleyenRandevularController::class, 'BekleyenRandevular_POST']);

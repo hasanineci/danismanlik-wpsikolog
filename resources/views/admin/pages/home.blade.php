@@ -20,7 +20,7 @@
                             <div class="icon-wrapper-bg bg-primary"></div>
                             <i class="ti-bookmark-alt text-primary"></i>
                         </div>
-                        <div class="widget-numbers"><span>50</span></div>
+                        <div class="widget-numbers"><span>{{ getMailCount() }}</span></div>
                         <div class="widget-subheading">Toplam Gelen Mailler</div>
                     </div>
                 </div>
@@ -30,8 +30,8 @@
                             <div class="icon-wrapper-bg bg-danger"></div>
                             <i class="ti-email text-danger"></i>
                         </div>
-                        <div class="widget-numbers"><span>12</span></div>
-                        <div class="widget-subheading">Okunmayan Mail Sayısı</div>
+                        <div class="widget-numbers"><span>{{ getNewMailCount() }}</span></div>
+                        <div class="widget-subheading">Okunmayan Mail</div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -40,7 +40,7 @@
                             <div class="icon-wrapper-bg bg-info"></div>
                             <i class="ti-comments text-info"></i>
                         </div>
-                        <div class="widget-numbers"><span>130</span></div>
+                        <div class="widget-numbers"><span>{{ getMeetingCount() }}</span></div>
                         <div class="widget-subheading">Toplam Gelen Randevu</div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
                             <div class="icon-wrapper-bg bg-dark"></div>
                             <i class="ti-comment text-dark"></i>
                         </div>
-                        <div class="widget-numbers"><span>10</span></div>
-                        <div class="widget-subheading">Okunmayan Randevu Sayısı</div>
+                        <div class="widget-numbers"><span>{{ getWaitMeetingCount() }}</span></div>
+                        <div class="widget-subheading">Okunmayan Randevu</div>
                     </div>
                 </div>
             </div>

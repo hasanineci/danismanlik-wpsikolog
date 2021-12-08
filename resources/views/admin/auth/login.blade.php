@@ -28,7 +28,7 @@
 
 <body class="crm_body_bg">
     <section class="main_content dashboard_part large_header_bg MainContent">
-        <div class="main_content_iner">
+        <div class="main_content_iner windowsPoint">
             <div class="container-fluid p-0">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">

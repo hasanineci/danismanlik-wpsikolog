@@ -22,7 +22,7 @@
                                         <a class="nav-link active" id="Referanslar-tab" data-toggle="tab"
                                             href="#Referanslar" role="tab" aria-controls="Referanslar"
                                             aria-selected="true">
-                                            <i class="ti-unlock"></i> &nbsp;Referanslar</a>
+                                            <i class="ti-id-badge"></i> &nbsp;Referanslar</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="Sifre-Degistir-tab" data-toggle="tab"
@@ -77,6 +77,7 @@
                                                                     <th scope="col">Referans Yetkisi</th>
                                                                     <th scope="col">Kurum/İşletme Yeri</th>
                                                                     <th scope="col">Fotoğraf</th>
+                                                                    <th scope="col">Düzenle</th>
                                                                     <th scope="col">Durumu</th>
                                                                 </tr>
                                                             </thead>
@@ -90,7 +91,9 @@
                                                                     <td>{{ $referanslar->referans_yetki}}</td>
                                                                     <td>{{ $referanslar->bulundugu_yer}}</td>
                                                                     <td>{{ $referanslar->fotograf}}</td>
-                                                                    <td><span type="submit" class="status_btn">{{ $referanslar->durum}}</span></td>
+                                                                    <td><button type="button" class="btn btn-info"><i
+                                                                                class="ti-pencil"></i></button></td>
+                                                                    <td>{{ $referanslar->durum}}</td>
                                                                 </tr>
                                                                 @endforeach
                                                             </tbody>
@@ -104,41 +107,39 @@
                                 <div class="tab-pane fade" id="Sifre-Degistir" role="tabpanel"
                                     aria-labelledby="Sifre-Degistir-tab">
                                     <div class="builder_select">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="form-group col-xl-4 col-lg-6">
-                                                    <label for="inputSifre">Eski Şifre</label>
-                                                    <input type="text" name="Sifre" class="form-control" id="inputSifre"
-                                                        placeholder="" value="{{ $yonetimAyarlari->sifre_degistir ?? old('sifre_degistir') }}" readonly>
-                                                </div>
-                                                <div class="form-group col-xl-4 col-lg-6">
-                                                    <label for="inputSifre">Yeni Şifre</label>
-                                                    <input type="text" name="Sifre" class="form-control" id="inputSifre"
-                                                        placeholder="">
-                                                </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-xl-4 col-lg-6">
+                                                <label for="inputSifre">Eski Şifre</label>
+                                                <input type="text" class="form-control" id="inputSifre" placeholder=""
+                                                    value="{{ $yonetimAyarlari->sifre_degistir ?? old('sifre_degistir') }}"
+                                                    readonly>
                                             </div>
-                                            <button type="submit" class="btn btn-success">Kaydet</button>
-                                        </form>
+                                            <div class="form-group col-xl-4 col-lg-6">
+                                                <label for="inputSifre">Yeni Şifre</label>
+                                                <input type="text" name="Sifre" class="form-control" id="inputSifre"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
                                     </div>
+                                    <button type="submit" class="btn btn-success">Kaydet</button>
                                 </div>
                                 <div class="tab-pane fade" id="Calisma-Saatleri" role="tabpanel"
                                     aria-labelledby="Calisma-Saatleri-tab">
                                     <div class="builder_select">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="form-group col-xl-4 col-lg-6">
-                                                    <label for="inputSaat">Eski Çalışma Günleri</label>
-                                                    <input type="text" name="CalismaSaat" class="form-control"
-                                                        id="inputSaat" placeholder="" value="{{ $yonetimAyarlari->calisma_gunleri ?? old('calisma_gunleri') }}" readonly>
-                                                </div>
-                                                <div class="form-group col-xl-4 col-lg-6">
-                                                    <label for="inputSaat">Yeni Çalışma Saatleri</label>
-                                                    <input type="text" name="CalismaSaat" class="form-control"
-                                                        id="inputSaat" placeholder="">
-                                                </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-xl-4 col-lg-6">
+                                                <label for="inputSaat">Eski Çalışma Günleri</label>
+                                                <input type="text" class="form-control" id="inputSaat" placeholder=""
+                                                    value="{{ $yonetimAyarlari->calisma_gunleri ?? old('calisma_gunleri') }}"
+                                                    readonly>
                                             </div>
-                                            <button type="submit" class="btn btn-success">Kaydet</button>
-                                        </form>
+                                            <div class="form-group col-xl-4 col-lg-6">
+                                                <label for="inputSaat">Yeni Çalışma Saatleri</label>
+                                                <input type="text" name="CalismaSaat" class="form-control"
+                                                    id="inputSaat" placeholder="">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Kaydet</button>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="Sertifika-ve-Oduller" role="tabpanel"
@@ -171,21 +172,25 @@
                                                                     <th scope="col">Belge Tarihi</th>
                                                                     <th scope="col">Fotoğraf</th>
                                                                     <th scope="col">Durumu</th>
+                                                                    <th scope="col">Düzenle</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 @foreach ($sertifikaOduller as $sertifikaOduller)
-                                                                    
+
                                                                 @endforeach
                                                                 <tr>
-                                                                    <th scope="row">{{ $sertifikaOduller->belge_adi }}</th>
+                                                                    <th scope="row">{{ $sertifikaOduller->belge_adi }}
+                                                                    </th>
                                                                     <td>{{ $sertifikaOduller->alindigi_yer }}</td>
                                                                     <td>{{ $sertifikaOduller->alani }}</td>
                                                                     <td>{{ $sertifikaOduller->egitim_suresi }}</td>
                                                                     <td>{{ $sertifikaOduller->verildigi_yer }}</td>
                                                                     <td>{{ $sertifikaOduller->belge_tarihi }}</td>
                                                                     <td>{{ $sertifikaOduller->fotograf }}</td>
-                                                                    <td><span type="submit" class="status_btn">{{ $sertifikaOduller->durum }}</span></td>
+                                                                    <td>{{$sertifikaOduller->durum }}</td>
+                                                                    <td><button type="button" class="btn btn-info"><i
+                                                                                class="ti-pencil"></i></button></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>

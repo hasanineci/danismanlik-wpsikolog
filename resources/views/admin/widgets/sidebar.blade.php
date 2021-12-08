@@ -34,6 +34,7 @@
                 </div>
                 <div class="nav_title">
                     <span>Yeni Gelen</span>
+                    <span class="badge badge-light" style="color: red; {{ NewMailCount() }}">{{ getNewMailCount() }}</span>
                 </div>
             </a>
         </li>
@@ -56,6 +57,7 @@
                 </div>
                 <div class="nav_title">
                     <span>Bekleyen</span>
+                    <span class="badge badge-light" style="color: red; {{ WaitMeetingCount() }}">{{ getWaitMeetingCount() }}</span>
                 </div>
             </a>
         </li>

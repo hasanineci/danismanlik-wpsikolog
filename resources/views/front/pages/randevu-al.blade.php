@@ -26,8 +26,7 @@
                                         </div>
                                         <div class="contact__info-content">
                                             <h3>Adresimiz</h3>
-                                            <span>Bahçelievler Mah. 1020 Sok. Barkın Apt. No:12/1</span>
-                                            <span> Haliliye - Şanlıurfa</span>
+                                            <span>{{ iletisim()->adres }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +37,7 @@
                                         </div>
                                         <div class="contact__info-content">
                                             <h3>Telefon Numarası</h3>
-                                            <span>(+90) 541 123 45 67 </span>
+                                            <a href="tel:{{ iletisim()->telefon }}"><span>{{ iletisim()->telefon }} </span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -50,8 +49,7 @@
                                         <div class="contact__info-content">
                                             <h3>Email</h3>
                                             <span>
-                                                <a href="#" class="__cf_email__"
-                                                    data-cfemail="7a0a1b0e131f140e3a181b091319171f54191517">info@wpisikoloji.com</a>
+                                                <a href="mailto:{{ iletisim()->email }}" class="__cf_email__">{{ iletisim()->email }}</a>
                                             </span>
                                         </div>
                                     </div>

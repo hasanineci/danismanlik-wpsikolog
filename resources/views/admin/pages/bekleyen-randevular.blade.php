@@ -18,7 +18,7 @@
                         <div class="white_card_body">
                             <div class="QA_section">
                                 <div class="white_box_tittle list_header">
-                                    <h4>Onaylanan Randevular</h4>
+                                    <h4>Bekleyen Randevular</h4>
                                 </div>
 
                                 <div class="QA_table mb_30">
@@ -28,58 +28,27 @@
                                             <tr>
                                                 <th scope="col">Adı Soyadı</th>
                                                 <th scope="col">Telefon</th>
-                                                <th scope="col">E-mail</th>
-                                                <th scope="col">Talep Tarihi</th>
                                                 <th scope="col">Randevu Tarihi</th>
                                                 <th scope="col">Randevu Saati</th>
-                                                <th scope="col">Durumu</th>
                                                 <th scope="col">İstediği Psikolog</th>
                                                 <th scope="col">Şikayeti</th>
+                                                <th scope="col">Durumu</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($onaylananrandevular as $randevu)
                                             <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Deneme deneme</a>
-                                                </th>
-                                                <td>0541 234 56 78</td>
-                                                <td>deneme@example.com</td>
-                                                <td>12/12/2021 12:00:00</td>
-                                                <td>12/12/2021</td>
-                                                <td>14:20</td>
-                                                <td><a href="#" class="status_btn">Okunmadı</a></td>
-                                                <td>Dr. Abdülselam Altuntaş</td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                                                    aut quaerat dicta, ad, aliquam odio omnis, at sunt dolore dolor illo
-                                                    eius placeat quas esse! Rerum quidem magnam corrupti fuga.</td>
+                                                <th scope="row">{{ $randevu->adi }}</th>
+                                                <td>{{ $randevu->telefon }}</td>
+                                                <td>{{ $randevu->randevu_tarihi }}</td>
+                                                <td>{{ $randevu->randevu_saati }}</td>
+                                                <td>{{ $randevu->istedigi_psikolog }}</td>
+                                                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:150px;">
+                                                    {{ $randevu->sikayeti }}</td>
+                                                    <td><button class="status_btn">OKU</button></td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Deneme deneme</a>
-                                                </th>
-                                                <td>0541 234 56 78</td>
-                                                <td>deneme@example.com</td>
-                                                <td>12/12/2021 12:00:00</td>
-                                                <td>12/12/2021</td>
-                                                <td>14:20</td>
-                                                <td><a href="#" class="status_btn">Okunmadı</a></td>
-                                                <td>Dr. ibrahim Halil Barkın</td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                                                    aut quaerat dicta, ad, aliquam odio omnis, at sunt dolore dolor illo
-                                                    eius placeat quas esse! Rerum quidem magnam corrupti fuga.</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Deneme deneme</a>
-                                                </th>
-                                                <td>0541 234 56 78</td>
-                                                <td>deneme@example.com</td>
-                                                <td>12/12/2021 12:00:00</td>
-                                                <td>12/12/2021</td>
-                                                <td>14:20</td>
-                                                <td><a href="#" class="status_btn">Okunmadı</a></td>
-                                                <td>Dr. Ayşe Barkın</td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                                                    aut quaerat dicta, ad, aliquam odio omnis, at sunt dolore dolor illo
-                                                    eius placeat quas esse! Rerum quidem magnam corrupti fuga.</td>
-                                            </tr>
+                                                
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

@@ -21,6 +21,7 @@ class CreateIletisimTable extends Migration
             $table->string('linkedin');
             $table->string('adres');
             $table->string('telefon');
+            $table->string('email');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -32,6 +33,7 @@ class CreateIletisimTable extends Migration
             "linkedin" => "https://www.instagram.com/w_psikoloji/",
             "adres" => "Bahçelievler Mah. 1020 Sok. Barkın Apt. No:12/1 Haliliye - Şanlıurfa",
             "telefon" => "+905415148515",
+            "email" => "info@wsikoloji.com",
             "created_at" => date('Y-m-d H:i:s'),
             "updated_at" => date('Y-m-d H:i:s')
         ]);

@@ -10,12 +10,17 @@ class AnlasmaliKurumlarController extends Controller
 {
     public function AnlasmaliKurumlar_GET()
     {
-        $anlasmaliKurumlar = AnlasmaliKurumlar::all();
-        return view('admin.pages.anlasmali-kurumlar', compact('anlasmaliKurumlar'));
+        return view('admin.pages.anlasmali-kurumlar');
     }
 
     public function AnlasmaliKurumlar_POST()
     {
         # code...
+    }
+    
+    public function oku_POST(Request $request)
+    {
+        $anlasmaliKurumlar = AnlasmaliKurumlar::where('id', $request->anlasmali_kurumlar_id)->first();
+        return response()->json($anlasmaliKurumlar);
     }
 }

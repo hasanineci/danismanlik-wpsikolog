@@ -23,11 +23,10 @@
 
                                         <div class="social text-center">
                                             <ul>
-                                                <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="{{ url("#") }}"><i class="fab fa-pinterest-p"></i></a></li>
-                                                <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="{{ iletisim()->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="{{ iletisim()->twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="{{ iletisim()->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="{{ iletisim()->linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -68,18 +67,18 @@
                                 <div class="footer__widget-content">
                                     <div class="footer__services">
                                         <ul>
-                                            <li><a href="{{ url("#") }}">Aile Terapisi</a></li>
-                                            <li><a href="{{ url("#") }}">Çift Terapisi</a></li>
-                                            <li><a href="{{ url("#") }}">Danışmanlık</a></li>
-                                            <li><a href="{{ url("#") }}">Deprasyon Sorunu</a></li>
-                                            <li><a href="{{ url("#") }}">Flört & İlişki Terapisi</a></li>
-                                            <li><a href="{{ url("#") }}">Aile Danışmanlığı</a></li>
-                                            <li><a href="{{ url("#") }}">Oyun Terapisi</a></li>
-                                            <li><a href="{{ url("#") }}">Kliniğimizde Uygulanan testler</a></li>
-                                            <li><a href="{{ url("#") }}">Konuşma Bozukluğu Tedavisi</a></li>
-                                            <li><a href="{{ url("#") }}">Psikolog Hizmetleri</a></li>
-                                            <li><a href="{{ url("#") }}">Psikoterapiler</a></li>
-                                            <li><a href="{{ url("#") }}">Psikiyatrik Tedaviler</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Aile Terapisi</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Çift Terapisi</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Danışmanlık</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Deprasyon Sorunu</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Flört & İlişki Terapisi</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Aile Danışmanlığı</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Oyun Terapisi</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Kliniğimizde Uygulanan testler</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Konuşma Bozukluğu Tedavisi</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Psikolog Hizmetleri</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Psikoterapiler</a></li>
+                                            <li><a href="{{ url('/hizmetlerimiz') }}">Psikiyatrik Tedaviler</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -95,22 +94,20 @@
                                         <ul>
                                             <li>
                                                 <div class="footer__contact-address">
-                                                    <span>Bahçelievler Mah. 1101 Sok. wpikoloji apt. no:1/2 Haliliye /
-                                                        Şanlıurfa</span>
+                                                    <span>{{ iletisim()->adres }}</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="footer__contact-item">
                                                     <h6>Email:</h6>
-                                                    <p><a href="mailto:info@wpsikoloji.com" class="__cf_email__"
-                                                            data-cfemail="info@wpsikoloji.com">info@wpsikoloji.com</a>
+                                                    <p><a href="mailto:{{ iletisim()->email }}" class="__cf_email__">{{ iletisim()->email }}</a>
                                                     </p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="footer__contact-item">
                                                     <h6>Telefon:</h6>
-                                                    <p>+90 541 123 4567</p>
+                                                    <p><a href="tel:{{ iletisim()->telefon }}">{{ iletisim()->telefon }}</a></p>
                                                 </div>
                                             </li>
                                         </ul>

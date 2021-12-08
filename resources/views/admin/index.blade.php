@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="tr">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>@yield('title') - WPSİKOLOJİ</title>
 
     <link rel="icon" href="{{ asset('assets/admin/img/mini_logo.png') }}" type="image/png">
@@ -47,6 +48,9 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/admin/css/colors/default.css') }}" id="colorSkinCSS">
+
+    <!-- toastr -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 
 <body class="crm_body_bg">
@@ -133,6 +137,13 @@
     <!-- custom js -->
     <script src="{{ asset('assets/admin/js/dashboard_init.js') }}"></script>
     <script src="{{ asset('assets/admin/js/custom.js') }}"></script>
+
+    <!-- toastr -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    @include('admin.widgets.toastr.notifications')
+
+    @yield('js')
 
 </body>
 

@@ -18,7 +18,7 @@
                         <div class="white_card_body">
                             <div class="QA_section">
                                 <div class="white_box_tittle list_header">
-                                    <h4>Onaylanan Randevular</h4>
+                                    <h4>Gelen Mailler</h4>
                                 </div>
 
                                 <div class="QA_table mb_30">
@@ -30,44 +30,23 @@
                                                 <th scope="col">Telefon</th>
                                                 <th scope="col">E-mail</th>
                                                 <th scope="col">Konu</th>
-                                                <th scope="col">Mail</th>
+                                                <th scope="col">Mesaj</th>
                                                 <th scope="col">Durumu</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($mail as $mail)
                                             <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Deneme deneme</a>
-                                                </th>
-                                                <td>0541 234 56 78</td>
-                                                <td>deneme@example.com</td>
-                                                <td>Terapi Almak İstiyorum</td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                                                    aut quaerat dicta, ad, aliquam odio omnis, at sunt dolore dolor illo
-                                                    eius placeat quas esse! Rerum quidem magnam corrupti fuga.</td>
-                                                <td><a href="#" class="status_btn">Oku</a></td>
+                                                <th scope="row">{{ $mail->adi }}</th>
+                                                <td>{{ $mail->telefon }}</td>
+                                                <td>{{ $mail->email }}</td>
+                                                <td>{{ $mail->konu }}</td>
+                                                <td
+                                                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:200px;">
+                                                    {{ $mail->mesaj }}</td>
+                                                <td><button type="button" class="btn btn-sm btn-success btn-mail-oku" data-mail-id="{{ $mail->id }}">OKU</button></td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Deneme deneme</a>
-                                                </th>
-                                                <td>0541 234 56 78</td>
-                                                <td>deneme@example.com</td>
-                                                <td>Terapi Almak İstiyorum</td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                                                    aut quaerat dicta, ad, aliquam odio omnis, at sunt dolore dolor illo
-                                                    eius placeat quas esse! Rerum quidem magnam corrupti fuga.</td>
-                                                <td><a href="#" class="status_btn">Oku</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"> <a href="#" class="question_content">Deneme deneme</a>
-                                                </th>
-                                                <td>0541 234 56 78</td>
-                                                <td>deneme@example.com</td>
-                                                <td>Terapi Almak İstiyorum</td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                                                    aut quaerat dicta, ad, aliquam odio omnis, at sunt dolore dolor illo
-                                                    eius placeat quas esse! Rerum quidem magnam corrupti fuga.</td>
-                                                <td><a href="#" class="status_btn">Oku</a></td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -79,8 +58,15 @@
         </div>
     </div>
 
+
+    @include('admin.widgets.mail.mail-content-modal')
+
+
     <!-- footer part -->
     @include('admin.widgets.footer')
 </section>
 
+@endsection
+@section('js')
+<script src="{{ asset('assets/admin/js/mail/mail.js') }}"></script>
 @endsection
