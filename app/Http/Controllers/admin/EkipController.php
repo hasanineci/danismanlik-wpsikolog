@@ -11,10 +11,11 @@ class EkipController extends Controller
 {
     public function Ekip_GET()
     {
-        $ayse = Ekibimiz::where('id', 1)->first();
-        $ibrahim = Ekibimiz::where('id', 2)->first();
-        $abdulselam = Ekibimiz::where('id', 3)->first();
-        return view('admin.pages.ekip', compact('ayse', 'ibrahim', 'abdulselam'));
+        $ayse = Ekibimiz::where('name', "ayse barkın")->first();
+        $ibrahim = Ekibimiz::where('name', "ibrahim halil barkın")->first();
+        $abdulselam = Ekibimiz::where('name', "abdülselam altıntaş")->first();
+        $count = Ekibimiz::all()->count();
+        return view('admin.pages.ekip', compact('ayse', 'ibrahim', 'abdulselam', 'count'));
     }
     public function Ekip_POST()
     {

@@ -28,9 +28,9 @@
                             <li><a href="{{ $ayse->instagram }}" target="_blank" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <div class="text-center profile-details">
-                            <h4>{{ $ayse->name }}</h4>
-                            <h6>{{ $ayse->alani }}</h6>
-                            <h6>{{ $ayse->email }}</h6>
+                            <h4 style="text-transform: capitalize;">{{ $ayse->name }}</h4>
+                            <h6 style="text-transform: capitalize;">{{ $ayse->alani }}</h6>
+                            <h6 style="text-transform: capitalize;">{{ $ayse->email }}</h6>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#AyseModalCenter">
@@ -53,9 +53,9 @@
                             <li><a href="{{ $ibrahim->instagram }}" target="_blank" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <div class="text-center profile-details">
-                            <h4>{{ $ibrahim->name }}</h4>
-                            <h6>{{ $ibrahim->alani }}</h6>
-                            <h6>{{ $ibrahim->email }}</h6>
+                            <h4 style="text-transform: capitalize;">{{ $ibrahim->name }}</h4>
+                            <h6 style="text-transform: capitalize;">{{ $ibrahim->alani }}</h6>
+                            <h6 style="text-transform: capitalize;">{{ $ibrahim->email }}</h6>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#ibrahimBarkinModalCenter">
@@ -78,9 +78,9 @@
                             <li><a href="{{ $abdulselam->instagram }}" target="_blank" data-original-title="" title=""><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <div class="text-center profile-details">
-                            <h4>{{ $abdulselam->name }}</h4>
-                            <h6>{{ $abdulselam->alani }}</h6>
-                            <h6>{{ $abdulselam->email }}</h6>
+                            <h4 style="text-transform: capitalize;">{{ $abdulselam->name }}</h4>
+                            <h6 style="text-transform: capitalize;">{{ $abdulselam->alani }}</h6>
+                            <h6 style="text-transform: capitalize;">{{ $abdulselam->email }}</h6>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#AbdulselamModalCenter">

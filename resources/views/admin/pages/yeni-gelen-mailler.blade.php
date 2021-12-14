@@ -44,7 +44,8 @@
                                                 <td
                                                     style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:200px;">
                                                     {{ $mail->mesaj }}</td>
-                                                    <td><button type="button" class="btn btn-sm btn-success btn-mail-oku" data-mail-id="{{ $mail->id }}">OKU</button></td>
+                                                <td><button type="button" class="btn btn-sm btn-success btn-mail-oku"
+                                                        data-mail-id="{{ $mail->id }}">OKU</button></td>
                                             </tr>
                                             @endforeach
                                         </tbody>
@@ -57,7 +58,6 @@
             </div>
         </div>
     </div>
-
 
     @include('admin.widgets.mail.mail-content-modal')
 
